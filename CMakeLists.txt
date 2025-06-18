@@ -144,7 +144,7 @@ LIBRARY
 PACKAGES
     ${COMMON_PACKAGES}
 CUSTOM_VAPIS
-    bindings/*.vapi
+    "${CMAKE_CURRENT_SOURCE_DIR}/bindings/*.vapi"
 OPTIONS
     --target-glib=${TARGET_GLIB}
     ${GRX3_VAPIDIR_OPTION}
@@ -236,8 +236,8 @@ if (EV3DEVKIT_BUILD_DEMO)
         ${DEVICES_DEMO_SOURCE_FILES}
     PACKAGES
         ${EXEC_PACKAGES}
-    CUSTOM_VAPIS
-        bindings/*.vapi
+    CUSTOM_VAPIS 
+        "${CMAKE_CURRENT_SOURCE_DIR}/bindings/*.vapi"
     OPTIONS
         --target-glib=${TARGET_GLIB}
         --vapidir=${CMAKE_CURRENT_BINARY_DIR}
@@ -271,7 +271,7 @@ if (EV3DEVKIT_BUILD_DEMO)
     PACKAGES
         ${EXEC_PACKAGES}
     CUSTOM_VAPIS
-        bindings/*.vapi
+        "${CMAKE_CURRENT_SOURCE_DIR}/bindings/*.vapi"
     OPTIONS
         --target-glib=${TARGET_GLIB}
         --vapidir=${CMAKE_CURRENT_BINARY_DIR}
@@ -306,7 +306,7 @@ if (VALADOC_FOUND)
     include (ValadocGenerate)
     generate_valadoc (
         ${LIBRARY_SOURCE_FILES}
-        bindings/*.vapi
+        "${CMAKE_CURRENT_SOURCE_DIR}/bindings/*.vapi"
     PACKAGE_NAME
         ${PROJECT_NAME}
     PACKAGE_VERSION
