@@ -174,8 +174,8 @@ namespace Ev3devKit.Ui {
             if (context_mem_addr == null)
                 context = Context.new_full (mode, width, height);
             else {
-                uint8* addr[4];
-                addr[0] = context_mem_addr;
+                uint8 addr[4];
+                addr[0] = *context_mem_addr;
                 context = Context.new_full (mode, width, height, addr);
             }
         }
