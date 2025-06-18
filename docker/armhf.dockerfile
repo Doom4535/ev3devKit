@@ -1,4 +1,4 @@
-FROM ev3dev/debian-bullseye-armhf-cross
+FROM ev3dev/debian-bookworm-armhf-cross
 
 RUN sudo apt-get update && \
     DEBIAN_FRONTEND=noninteractive sudo apt-get install --yes --no-install-recommends \
